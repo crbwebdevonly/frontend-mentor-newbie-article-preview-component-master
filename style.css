@@ -1,0 +1,203 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html {
+     font-family: "Manrope", sans-serif;
+     font-size: 13px;
+     /* weights  5/700*/
+}
+body {
+     /* background-color: red; */
+}
+
+.outer-container {
+     height: 667px;
+     width: 375px;
+     background-color: hsl(210, 46%, 95%);
+     -webkit-box-shadow: 1px 2px 14px 3px rgba(0, 0, 0, 0.33);
+     box-shadow: 1px 2px 14px 3px rgba(0, 0, 0, 0.33);
+     margin: 50px;
+     padding: 4rem 2rem;
+     position: relative;
+}
+.container {
+     background-color: white;
+     border-radius: 10px;
+     overflow: hidden;
+}
+.header {
+}
+.header img {
+     height: 230px;
+     width: 330px;
+     object-fit: cover;
+}
+
+.section-main {
+     /* padding: 1rem 2.5rem; */
+}
+.title {
+     font-size: 1.1rem;
+     font-weight: 700;
+     /* letter-spacing: 1px; */
+     line-height: 1.7rem;
+     color: hsl(217, 19%, 35%);
+     /* padding: 1rem 0; */
+     padding: 2rem 2.5rem 1rem 2.5rem;
+}
+.section-main p {
+     font-size: 0.91rem;
+     font-weight: 500;
+     line-height: 1.5rem;
+     /* padding-right: 2.5rem;
+     padding-bottom: 2.5rem; */
+     color: hsl(217, 19%, 35%);
+     padding: 0rem 2.5rem 1rem 2.5rem;
+}
+
+/* footer */
+.footer {
+     position: relative;
+}
+
+.footer1 {
+     display: none;
+     opacity: 0;
+     transition: all 1s ease;
+}
+
+.footer1.show {
+     opacity: 1;
+     display: flex;
+     padding: 2rem;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.footer1.show img {
+     height: 40px;
+     border-radius: 50%;
+}
+.info {
+     flex-basis: 75%;
+}
+.name {
+     font-size: 0.91rem;
+     font-weight: 700;
+     color: hsl(217, 19%, 35%);
+}
+.birth-date {
+     font-size: 0.91rem;
+     font-weight: 500;
+     opacity: 0.7;
+}
+.footer-arrow {
+     position: absolute;
+     background-color: hsl(210, 46%, 95%);
+     /* height: 50%; */
+     padding: 0.71rem;
+     border-radius: 50%;
+     /* align-self: flex-end; */
+     cursor: pointer;
+     top: 50%;
+     transform: translate(-100%, -50%);
+     right: 0;
+     z-index: 5;
+}
+
+/* footer2 */
+.footer2,
+.footer3 {
+     display: none;
+     opacity: 0;
+     transition: all 1s ease;
+}
+
+.footer2.show,
+.footer3.show {
+     opacity: 1;
+     background-color: hsl(217, 19%, 35%);
+     display: flex;
+     padding: 2rem 2.5rem 2rem 2.5rem;
+     align-items: center;
+     /* justify-content: space-between; */
+     gap: 15px;
+}
+.footer2.show p,
+.footer3.show p {
+     color: hsl(210, 46%, 95%);
+     text-transform: uppercase;
+     letter-spacing: 5px;
+     padding: 0;
+}
+.footer2.show img,
+.footer3.show img {
+     object-fit: contain;
+}
+
+.footer3 {
+     display: none;
+}
+
+/* ======================================================================== */
+/* desktop mode below */
+/* ======================================================================== */
+
+@media screen and (min-width: 600px) {
+     .outer-container {
+          height: 800px;
+          width: 1440px;
+          display: grid;
+          place-content: center;
+     }
+
+     .container {
+          /* padding: 10rem 3rem; */
+          height: 280px;
+          width: 730px;
+          display: flex;
+     }
+     .header {
+          flex-basis: 10%;
+     }
+     .header img {
+          width: 290px;
+          height: 100%;
+          object-fit: cover;
+     }
+
+     .section-main {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 1rem;
+     }
+     .title {
+          font-size: 1.7rem;
+     }
+     .info {
+          flex-basis: 85%;
+     }
+
+     .footer3.show {
+          position: absolute;
+          top: 45%;
+          right: 20%;
+          border-radius: 10px;
+     }
+     .pointer {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 20px 10px 0 10px;
+          border-color: #48556a transparent transparent transparent;
+          position: absolute;
+          top: 100%;
+          left: 45%;
+     }
+     /* ======================================================================= */
+     /* end media query */
+}
